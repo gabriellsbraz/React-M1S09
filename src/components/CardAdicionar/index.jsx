@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function CardAdicionar() {
+function CardAdicionar(props) {
 
   const [textoTarefa, setTextoTarefa] = useState("")
 
@@ -11,7 +11,7 @@ function CardAdicionar() {
       onChange={(evento) => setTextoTarefa(evento.target.value)} 
       placeholder="Digite sua tarefa"
     />
-    <button onClick={() => {}}>Adicionar</button>
+    <button onClick={() => props.adicionarTarefa(textoTarefa)}>Adicionar</button>
   </div>
   )
 }
