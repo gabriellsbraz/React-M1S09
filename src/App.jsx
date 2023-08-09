@@ -4,6 +4,7 @@ import CardAdicionar from './components/CardAdicionar'
 function App() {
 
   const [listaTarefas, setListaTarefas] = useState([
+<<<<<<< HEAD
     {id: 1, textoTarefa: "tarefa 1", finalizado: false}
   ])
 
@@ -17,6 +18,10 @@ function App() {
 
     setListaTarefas((dadosAtual) => [...dadosAtual, novaTarefa])
   }
+=======
+    {textoTarefa: "tarefa 1", finalizado: false}
+  ])
+>>>>>>> 5107a7f9b6e126b11af0cfe545beedf6e880435f
  
   return (
     <>
