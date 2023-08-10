@@ -16,11 +16,17 @@ function App() {
 
     setListaTarefas([...listaTarefas, novaTarefa])
   }
+
+  const removerTarefa = (id) => {
+    const novaLista = listaTarefas.filter(item => item.id != id)
+
+    setListaTarefas(novaLista)
+  }
  
   return (
     <>
      <CardAdicionar adicionarTarefa ={adicionarTarefa}/>
-    <div>{listaTarefas.map(tarefa => (<ListItem key={tarefa.id} textoTarefa={tarefa.textoTarefa} finalizado={tarefa.finalizado}></ListItem>))}</div>
+    <div>{listaTarefas.map(tarefa => (<ListItem key={tarefa.id} id={tarefa.id} removerTarefa={removerTarefa} textoTarefa={tarefa.textoTarefa} finalizado={tarefa.finalizado}></ListItem>))}</div>
     </>
   )
 }
