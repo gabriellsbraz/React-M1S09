@@ -4,6 +4,11 @@ function CardAdicionar(props) {
 
   const [textoTarefa, setTextoTarefa] = useState("")
 
+  const handleAdicionarTarefa = () => {
+    props.adicionarTarefa(textoTarefa)
+    setTextoTarefa("")
+  }
+
   return (
   <div>
     <input type="text"
@@ -11,7 +16,7 @@ function CardAdicionar(props) {
       onChange={(evento) => setTextoTarefa(evento.target.value)} 
       placeholder="Digite sua tarefa"
     />
-    <button onClick={() => props.adicionarTarefa(textoTarefa)}>Adicionar</button>
+    <button onClick={() => handleAdicionarTarefa()}>Adicionar</button>
   </div>
   )
 }
